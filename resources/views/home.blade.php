@@ -2,6 +2,10 @@
 
 @section('style')
     <style>
+        a {
+            text-decoration: none !important;
+        }
+
         .body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f9fafb;
@@ -333,7 +337,8 @@
                             alt="Pantai beach with palm trees and clear water under blue sky"
                             class="kategori-card-img-top" />
                         <div class="kategori-card-img-overlay d-flex flex-column justify-content-between">
-                            <span class="kategori-name">Pantai</span>
+                            <span class="kategori-name"><a href="{{ route('kategori.index', $pantai->nama) }}"
+                                    class="text-white">Pantai</a></span>
                             <i class="fas fa-camera kategori-camera-icon"></i>
                         </div>
                     </div>
@@ -343,7 +348,8 @@
                         <img src="/img/Header Rekreasi.jpg" alt="Rekreasi group rafting adventure with red helmets on river"
                             class="kategori-card-img-top" />
                         <div class="kategori-card-img-overlay d-flex flex-column justify-content-between">
-                            <span class="kategori-name">Rekreasi</span>
+                            <span class="kategori-name"><a href="{{ route('kategori.index', $rekreasi->nama) }}"
+                                    class="text-white">Rekreasi</a></span>
                             <i class="fas fa-camera kategori-camera-icon"></i>
                         </div>
                     </div>
@@ -354,7 +360,8 @@
                             class="kategori-card-img-top" />
                         <div
                             class="kategori-card-img-overlay kategori-card-img-overlay-dark d-flex flex-column justify-content-between">
-                            <span class="kategori-name">Gunung</span>
+                            <span class="kategori-name"><a href="{{ route('kategori.index', $gunung->nama) }}"
+                                    class="text-white">Gunung</a></span>
                             <i class="fas fa-camera kategori-camera-icon"></i>
                         </div>
                     </div>
@@ -365,7 +372,8 @@
                             alt="Staycation water villa over clear water with green hills background"
                             class="kategori-card-img-top" />
                         <div class="kategori-card-img-overlay d-flex flex-column justify-content-between">
-                            <span class="kategori-name">Staycation</span>
+                            <span class="kategori-name"><a href="{{ route('kategori.index', $staycation->nama) }}"
+                                    class="text-white">Staycation</a></span>
                             <i class="fas fa-camera kategori-camera-icon"></i>
                         </div>
                     </div>

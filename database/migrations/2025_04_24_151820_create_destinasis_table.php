@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->string('nama');
             $table->string('slug')->unique();
             $table->string('lokasi');
+            $table->text('deskripsiFull');
             $table->text('deskripsi');
             $table->string('foto');
             $table->text('embed_map');

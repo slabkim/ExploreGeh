@@ -25,9 +25,13 @@ class HomeController extends Controller
         $embung = Destinasi::where('nama', 'Embung Unila')->first();
         $sakura = Destinasi::where('nama', 'Bukit Sakura')->first();
         $radisson = Destinasi::where('nama', 'Radisson Bandar Lampung')->first();
+        $rekreasi = Kategori::where('nama', 'Rekreasi')->first();
+        $pantai = Kategori::where('nama', 'Pantai')->first();
+        $gunung = Kategori::where('nama', 'Gunung')->first();
+        $staycation = Kategori::where('nama', 'Staycation')->first();
 
         return view('home', compact('kategori', 'pantaiKlara', 'radisson', 'pesagi', 'rajabasa', 'ringgung',
-        'tanjungsetia', 'mutun','gigihiu','krakatau','kambas','embung','sakura','radisson'
+        'tanjungsetia', 'mutun','gigihiu','krakatau','kambas','embung','sakura','radisson','rekreasi', 'pantai', 'gunung', 'staycation'
     ));
     }
 

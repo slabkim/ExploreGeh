@@ -7,6 +7,7 @@ use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\DestinasiController;
 use App\Http\Controllers\DetailpostController;
 use App\Http\Controllers\DetailDestinasiController;
+use App\Http\Controllers\KategoriController;
 
 
 Route::get('/', [HomeController::class, 'index']);
@@ -23,6 +24,9 @@ Route::get('/destinasi', [DestinasiController::class, 'index']);
 
 // ✅ Halaman detail destinasi (ambil dari DetailpostController)
 Route::get('/destinasi/{slug}', [DetailDestinasiController::class, 'show']);
+
+Route::get('/kategori/{kategori}', [KategoriController::class, 'index'])->name('kategori.index');
+
 
 //Ulasan customer
 Route::post('/ulasan', [UlasanController::class, 'store'])->name('ulasan.store');

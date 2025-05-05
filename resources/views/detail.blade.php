@@ -3,6 +3,10 @@
 
 @section('style')
     <style>
+        a {
+            text-decoration: none !important;
+        }
+
         .hero-container {
             position: relative;
             background-image: url('/img/header.jpg');
@@ -93,21 +97,13 @@
                         </div>
                     </div>
                     <div>
-                        <span>Kategori</span> <span>{{ $destinasi->kategori->nama }}</span>
+                        <span>Kategori</span> <span><a
+                                href="/kategori/{{ $destinasi->kategori->slug }}">{{ $destinasi->kategori->nama }}</a></span>
                     </div>
                 </div>
             </header>
-            <p class="small text-secondary lh-base mb-3">
-                Bacon ipsum dolor amet corned beef short ribs hamburger swine, ball tip bresaola short ribs tailcup strip
-                steak ground round rump. Alcatra shankle ham hock frankfurter, bacon pork sirloin salami meatball hamburger
-                venison tail bresaola tri-tip bresaola bacon strip steak kevin meatball shankle ball tip tenderloin sausage
-                beef ribs score ribs tongue filet mignon?
-            </p>
-            <p class="small text-secondary lh-base">
-                Chuck strip steak chicken meatloaf. On meatloaf ham hamburgers, shankle alcatra shoulder tenderloin ground
-                round bacon pastrami dolor amet corned beef. Hamburger swine, ball tip bresaola short ribs bresaola strip
-                steak ground round rump. Alcatra shankle ham hock frankfurter, bacon pork sirloin salami meatball hamburger
-                venison tail bresaola.
+            <p class="small text-secondary lh-base mb-3" style="font-size: 1rem;">
+                {{ $destinasi->deskripsiFull }}
             </p>
 
             <section class="mt-4">
