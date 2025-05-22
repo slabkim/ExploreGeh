@@ -178,11 +178,22 @@
         @endforeach
     </div>
 
-    <div class="staycation-hero">
-        <div class="staycation-overlay">
-            <h1>Not Just Adventures</h1>
-            <p>Make Room for Staycations</p>
-            <a href="#" class="staycation-button">check &#x2794;</a>
+    <div class="container mt-5">
+        <h3 class="mb-4 text-center">Kategori Lainnya</h3>
+        <div class="row justify-content-center">
+            @foreach ($kategoriLain as $k)
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="/kategori/{{ $k->nama }}" class="text-dark">
+                        <div class="card shadow-sm rounded-4 h-100">
+                            <img src="{{ asset($k->gambar ?? 'img/default.jpg') }}" class="card-img-top"
+                                style="height: 180px; object-fit: cover;" alt="{{ $k->nama }}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ $k->nama }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

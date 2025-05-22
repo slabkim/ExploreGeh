@@ -27,6 +27,5 @@ Route::get('/destinasi/{slug}', [DetailDestinasiController::class, 'show']);
 
 Route::get('/kategori/{kategori}', [KategoriController::class, 'index'])->name('kategori.index');
 
-
 //Ulasan customer
 Route::post('/ulasan', [UlasanController::class, 'store'])->name('ulasan.store');

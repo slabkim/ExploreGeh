@@ -182,7 +182,7 @@
         <div class="staycation-overlay">
             <h1>Not Just Adventures</h1>
             <p>Make Room for Staycations</p>
-            <a href="#" class="staycation-button">check &#x2794;</a>
+            <a href="{{ route('kategori.index', $staycation->nama) }}" class="staycation-button">check &#x2794;</a>
         </div>
     </div>
 @endsection
