@@ -183,10 +183,10 @@
         <div class="row justify-content-center">
             @foreach ($kategoriLain as $k)
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="/kategori/{{ $k->nama }}" class="text-dark">
+                    <a href="/kategori/{{ $k->slug }}" class="text-dark">
                         <div class="card shadow-sm rounded-4 h-100">
-                            <img src="{{ asset($k->gambar ?? 'img/default.jpg') }}" class="card-img-top"
-                                style="height: 180px; object-fit: cover;" alt="{{ $k->nama }}">
+                            <img src="{{ asset($k->gambar ? 'img/' . $k->gambar : 'img/pgg.jpg') }}" class="card-img-top"
+                                style="width: 100%; height: 180px; object-fit: cover;" alt="{{ $k->nama }}">
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $k->nama }}</h5>
                             </div>
