@@ -24,6 +24,8 @@ Route::get('/destinasi', [DestinasiController::class, 'index']);
 
 // ✅ Halaman detail destinasi (ambil dari DetailpostController)
 Route::get('/destinasi/{slug}', [DetailDestinasiController::class, 'show']);
+Route::get('/destinasi', [DestinasiController::class, 'index'])->name('destinasi.index');
+
 
 Route::get('/kategori/{kategori}', [KategoriController::class, 'index'])->name('kategori.index');
 

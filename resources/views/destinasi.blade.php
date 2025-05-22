@@ -178,6 +178,33 @@
         @endforeach
     </div>
 
+    <div class="container my-4">
+        <div class="row align-items-center">
+            <div class="col-md-auto mb-2 mb-md-0">
+                <form method="GET" action="{{ url()->current() }}" class="d-flex align-items-center">
+                    <label for="jumlah" class="me-2 mb-0">Tampilkan:</label>
+                    <select name="jumlah" id="jumlah" onchange="this.form.submit()"
+                        class="form-select form-select-sm w-auto">
+                        <option value="5" {{ request('jumlah') == 5 ? 'selected' : '' }}>5</option>
+                        <option value="10" {{ request('jumlah') == 10 ? 'selected' : '' }}>10</option>
+                        <option value="20" {{ request('jumlah') == 20 ? 'selected' : '' }}>20</option>
+                        <option value="50" {{ request('jumlah') == 50 ? 'selected' : '' }}>50</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="col"></div>
+
+            <div class="col-md-auto">
+                <div class="d-flex justify-content-md-end justify-content-center">
+                    {{ $destinasi->withQueryString()->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="staycation-hero">
         <div class="staycation-overlay">
             <h1>Not Just Adventures</h1>
